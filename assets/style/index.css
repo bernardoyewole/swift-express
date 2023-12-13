@@ -222,13 +222,15 @@ nav ul li + li {
     background-color: #f6f7fa;
 }
 
-.map div {
-    display: grid;
-    place-items: center;
-    height: 100%;
+.map-info {
+    position: relative;
+    top: 50%;
+    left: 25%;
+    right: 25%;
+    width: 50%;
 }
 
-.map div p {
+.map-info p {
     font-size: 20px;
     font-weight: 400;
 }
