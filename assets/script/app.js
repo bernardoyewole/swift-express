@@ -3,14 +3,15 @@
 import { onEvent, select, selectAll, create, print } from "./utils.js";
 
 'use strict';
+
+const trackButton = selector('.track-button');
+const displayMap = selector('.map');
+const mapInfo = select('.map-info');
  
 function selector(element, parent = document) {
     return parent.querySelector(element);
 }
- 
-const trackButton = selector('.track-button');
-const displayMap = selector('.map');
- 
+
 function getLocation(position){    
     const {latitude, longitude} = position.coords;
  
@@ -43,12 +44,17 @@ function mapConfig(longitude, latitude){
         'top-left'
     );
     const marker1 = new mapboxgl.Marker({color: '#ff7342'})
-    .setLngLat([longitude,latitude])
+    .setLngLat([longitude, latitude])
     .addTo(map);
 }
- 
+
+function removeMapInfo() {
+    mapInfo.innerText ='';
+}
+
 trackButton.addEventListener('click', () => {
     if(navigator.geolocation) {
+        removeMapInfo();
         navigator.geolocation.getCurrentPosition(getLocation, errorHandler, options);
     } else {
         console.log('Geolocation not supported by your browser');
