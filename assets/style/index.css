@@ -9,6 +9,7 @@
 
 /* ------------------Header style---------------- */
 /* ---------------------------------------------- */
+
 header {
     height: 80px;
     line-height: 80px;
@@ -151,7 +152,6 @@ nav ul li + li {
     background-color: #f6f7fa;
     padding: 25px;
     height: 195px;
-    box-shadow: 5px 5px 10px -2px rgba(0,0,0,0.1);
 }
  
 .box-2, .box-4 {

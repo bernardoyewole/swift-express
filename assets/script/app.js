@@ -4,13 +4,8 @@ import { onEvent, select, selectAll, create, print } from "./utils.js";
 
 'use strict';
 
-const trackButton = selector('.track-button');
-const displayMap = selector('.map');
+const trackButton = select('.track-button');
 const mapInfo = select('.map-info');
- 
-function selector(element, parent = document) {
-    return parent.querySelector(element);
-}
 
 function getLocation(position){    
     const {latitude, longitude} = position.coords;
@@ -20,7 +15,6 @@ function getLocation(position){
  
 function errorHandler(){
     mapConfig(-97.19267,49.81486);
-    console.log("Unable to retrieve your location");
 }
  
 const options = {
@@ -52,11 +46,9 @@ function removeMapInfo() {
     mapInfo.innerText ='';
 }
 
-trackButton.addEventListener('click', () => {
+onEvent('click', trackButton, () => {
     if(navigator.geolocation) {
         removeMapInfo();
         navigator.geolocation.getCurrentPosition(getLocation, errorHandler, options);
-    } else {
-        console.log('Geolocation not supported by your browser');
     }
 });
