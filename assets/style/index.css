@@ -7,6 +7,40 @@
     margin-inline: auto;
 }
 
+/* ------------------Header style---------------- */
+/* ---------------------------------------------- */
+header {
+    height: 80px;
+    line-height: 80px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    display: inline;
+}
+
+nav ul li + li {
+    margin-left: 20px;
+} 
+
+.company-name {
+    font-size: 28px;
+    font-weight: 600;
+    /* color: #FF7342; */
+}
+
+.log-in, .sign-up {
+    padding: 10px 30px;
+}
+
+.log-in {
+    border: 2px solid #000;
+}
+
 /* ------------------Main style------------------ */
 /* ---------------------------------------------- */
 
@@ -14,6 +48,120 @@ main {
     height: 100%;
 }
 
+.hero {
+    background-color: #fff0ec;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 100%; */
+    padding: 90px 0px 90px 0px;
+}
+
+.hero-text h1 {
+    font-size: 120px;
+    letter-spacing: -8px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.1;
+    padding-bottom: 20px;
+}
+
+.drone-word {
+    background-color: #FF7342;
+    color: #fff;
+    padding: 0px 22px 0px 40px;
+    border-radius: 80px;
+    margin-right: 20px;
+    /* background: url(../img/drone-text.png) no-repeat; */
+}
+
+.hero-text p {
+    font-size: 18px;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+.hero-text button {
+    padding: 14px 28px;
+    background-color: #1B7FF7;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.why-us {
+    background-color: #fafafa;
+    padding: 50px 0;
+    height: fit-content;
+}
+ 
+.why-us .container {
+    display: flex;
+    align-items: center;
+}
+ 
+.context {
+    width: 30%;
+    padding: 10px;
+}
+ 
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+ 
+.context p {
+    margin-top: 20px;
+    color: #585858;
+}
+ 
+.context button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    transition: all 0.3s ease-in-out;
+}
+ 
+.context button:hover {
+    background-color: #fff;
+    color: #000;
+}
+ 
+.flex-box {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+}
+ 
+.row-1, .row-2 {
+    width: 250px;
+}
+ 
+.box-1, .box-2, .box-3, .box-4 {
+    background-color: #fff;
+    height: 230px;
+    /* padding: 25px; */
+    box-shadow: 5px 5px 10px -2px rgba(0,0,0,0.1);
+}
+ 
+.box-2, .box-4 {
+    margin-top: 20px;
+}
+ 
+h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+ 
+.flex-box p {
+    margin-top: 10px;
+    color: #585858;
+}
 
 /* ---------------Media Queries------------------ */
 /* ---------------------------------------------- */
